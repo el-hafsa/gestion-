@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de gestion de stock</title>
+    <script src="script.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e5d1e9;
+            border: 1px solid #eae7ea;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color: rgb(154, 0, 232);">Application de gestion de comptabilisation de stock</h1>
+
+    <section>
+        <h2>Gestion d'achat</h2>
+        <div>
+            <label for="idf">Id fournisseur:</label>
+            <input id="idf" type="text">
+        </div>
+        <div>
+            <label for="q">Quantité:</label>
+            <input id="q" type="text">
+        </div>
+        <div>
+            <label for="prix">Prix unitaire:</label>
+            <input id="prix" type="text">
+        </div>
+        <div>
+            <label for="d">Date:</label>
+            <input id="d" type="date">
+        </div>
+        <button type="button" onclick="enregistrerAchat()">Save</button>
+        <table id="tableAchat">
+            <thead>
+                <tr>
+                    <th>Id fournisseur</th>
+                    <th>Quantité</th>
+                    <th>Prix unitaire</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Gestion de Vente</h2>
+        <div>
+            <label for="Id_client">Id client:</label>
+            <input id="Id_client" type="text">
+        </div>
+        <div>
+            <label for="Quantite_vent">Quantité vente:</label>
+            <input id="Quantite_vent" type="text">
+        </div>
+        <div>
+            <label for="pv">Prix vente:</label>
+            <input id="pv" type="text">
+        </div>
+        <div>
+            <label for="Date_vent">Date vente:</label>
+            <input id="Date_vent" type="date">
+        </div>
+        <button type="button" onclick="enregistrerVente()">Save</button>
+        <table id="tableVente">
+            <thead>
+                <tr>
+                    <th>Id_client</th>
+                    <th>Quantité_vente</th>
+                    <th>Prix_vente</th>
+                    <th>Date_vente</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
